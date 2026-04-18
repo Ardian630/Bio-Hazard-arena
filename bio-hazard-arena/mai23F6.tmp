@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://ci08811acllu1"]
+
+[ext_resource type="PackedScene" uid="uid://dw25bxxi2g7sv" path="res://player.tscn" id="1_ws8va"]
+[ext_resource type="PackedScene" uid="uid://bw78nng3anqde" path="res://bullet_simple.tscn" id="2_3ykdm"]
+[ext_resource type="PackedScene" uid="uid://5oitepie4rn3" path="res://models/Suelo.glb" id="2_srhae"]
+[ext_resource type="PackedScene" uid="uid://dawlp3t4re74n" path="res://ui.tscn" id="3_onrkn"]
+[ext_resource type="PackedScene" uid="uid://7uy4diygd1ue" path="res://enemy.tscn" id="4_s5yt1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tf86n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lxh6s"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ws8va")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0296046, 17)
+speed = 9.0
+rotation_speed = 6.0
+flashlight_energy_drain = 2.0
+bullet_scene = ExtResource("2_3ykdm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 22.7578, 0)
+light_color = Color(0.287951, 0.414008, 0.809812, 1)
+shadow_enabled = true
+
+[node name="muro" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6, 7.57222, 0.5, -3.88574)
+mesh = SubResource("BoxMesh_tf86n")
+
+[node name="Ground" parent="." instance=ExtResource("2_srhae")]
+
+[node name="UI" parent="." instance=ExtResource("3_onrkn")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_s5yt1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1113, 1.17426, -16.0211)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_s5yt1")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20.433, 1.17399, -5.84981)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_s5yt1")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.30771, 1.17399, -7.08902)
+
+[node name="SueloColision" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SueloColision"]
+transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, -1.02078, 0)
+shape = SubResource("BoxShape3D_lxh6s")

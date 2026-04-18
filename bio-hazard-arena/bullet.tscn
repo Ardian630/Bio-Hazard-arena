@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://clh3v35rlv4no"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_xjwd6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3gwbw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35gma"]
+albedo_color = Color(0.148413, 0.894518, 0.977751, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7xpvx"]
+radius = 0.101384
+
+[node name="Bullet" type="RigidBody3D"]
+script = ExtResource("1_xjwd6")
+
+[node name="BulletMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_3gwbw")
+surface_material_override/0 = SubResource("StandardMaterial3D_35gma")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.231137, 0.657907, 0.696026, 1)
+light_energy = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_7xpvx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7uy4diygd1ue"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_fioap"]
+[ext_resource type="PackedScene" uid="uid://ddxawskw43ny5" path="res://models/Venus2.glb" id="2_i5ym6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odxfs"]
+size = Vector3(1.88513, 2.01349, 1.91199)
+
+[node name="Enemy" type="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_fioap")
+speed = 5.0
+health = 50
+
+[node name="EnemyCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000183105, -0.00790356, -0.794489)
+shape = SubResource("BoxShape3D_odxfs")
+
+[node name="Venus" parent="." instance=ExtResource("2_i5ym6")]
+transform = Transform3D(-1.2, 0, 1.81195e-07, 0, 1.2, 0, -1.81195e-07, 0, -1.2, -0.0089771, -1.04134, -0.803613)

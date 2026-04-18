@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=3 uid="uid://dqd7ho260h4fe"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_7gx2h"]
+[ext_resource type="Texture2D" uid="uid://bkt2otss2q07f" path="res://assets/Buttons/Solo_hover.png" id="3_jgn4r"]
+[ext_resource type="Texture2D" uid="uid://dn4epsexho31d" path="res://assets/Buttons/Solo_pressed.png" id="4_m1w7t"]
+[ext_resource type="Texture2D" uid="uid://blr4owb57t8lu" path="res://assets/Buttons/Solo_normal.png" id="5_0qu6l"]
+[ext_resource type="Texture2D" uid="uid://bdic2mvy0rrui" path="res://assets/MainMenuIMG.png" id="5_15gpd"]
+[ext_resource type="Texture2D" uid="uid://3x1serxlwvch" path="res://assets/Buttons/Salir_hover.png" id="6_liasy"]
+[ext_resource type="Texture2D" uid="uid://bueyrsfyi0nfl" path="res://assets/Buttons/Salir_pressed.png" id="7_qkqjq"]
+[ext_resource type="Texture2D" uid="uid://buyaho40ji7r0" path="res://assets/Buttons/Salir_normal.png" id="8_6qij4"]
+[ext_resource type="Texture2D" uid="uid://dvj5uudjgmx5s" path="res://assets/TituloBHA.png" id="9_qujig"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rj6"]
+texture = ExtResource("3_jgn4r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxnkj"]
+texture = ExtResource("4_m1w7t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rj4x3"]
+content_margin_bottom = 7.0
+texture = ExtResource("5_0qu6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dj1ji"]
+texture = ExtResource("6_liasy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_set1j"]
+texture = ExtResource("7_qkqjq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pijst"]
+texture = ExtResource("8_6qij4")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gx2h")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.252231, 0.355773, 0.214269, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_15gpd")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 185.0
+offset_right = 390.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_w8rj6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bxnkj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rj4x3")
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 287.0
+offset_right = 390.0
+offset_bottom = 387.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxTexture_dj1ji")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_set1j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pijst")
+
+[node name="Titulo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 20.0
+offset_right = -616.0
+offset_bottom = -480.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_qujig")
+expand_mode = 1
