@@ -239,9 +239,15 @@ func shoot():
 	var shoot_dir = (mouse_world_pos - muzzle.global_position).normalized()
 	shoot_dir.y = 0
 	
-	# Instanciar bala
-	var bullet = bullet_scene.instantiate()
-	get_parent().add_child(bullet)
+	# Instanciar bala ¡X! Descontinuado
+	# var bullet = bullet_scene.instantiate()
+	# get_parent().add_child(bullet)
+	
+	# Pedir bala prestada al Pool
+	var bullet = ProjectilePool.get_bullet()
+	
+	if not bullet:
+		return # Se cancela el disparo si el pool esta vacio
 	
 	# Configurar bala
 	bullet.global_position = muzzle.global_position

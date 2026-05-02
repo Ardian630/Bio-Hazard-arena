@@ -35,10 +35,11 @@ func _spawn_random_object():
 	var random_x = randf_range(-spawn_area_size.x / 2, spawn_area_size.x / 2)
 	var random_z = randf_range(-spawn_area_size.y / 2, spawn_area_size.y / 2)
 	
-	object.global_position = Vector3(random_x, 0.5, random_z)
-	
 	# Añadir a la escena
 	add_child(object)
+	
+	object.global_position = Vector3(random_x, 0.5, random_z)
+
 	current_objects += 1
 	
 	# Conectar señal para cuando desaparezca (recolectado o timeout)

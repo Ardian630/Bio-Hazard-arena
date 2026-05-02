@@ -101,13 +101,14 @@ func _spawn_single_enemy():
 			random_z = randf_range(-spawn_area_size.y / 2, spawn_area_size.y / 2)
 			spawn_position = Vector3(random_x, 0.5, random_z)
 	
-	enemy.global_position = spawn_position
-	
 	# Aumentar dificultad del enemigo según la horda
 	if enemy.has_method("set_wave_difficulty"):
 		enemy.set_wave_difficulty(current_wave)
 	
 	add_child(enemy)
+	
+	enemy.global_position = spawn_position
+	
 	enemies_spawned += 1
 	enemies_alive += 1
 	

@@ -23,15 +23,12 @@ func initialize(dir: Vector3, player: Node, max_range: float):
 	direction = dir.normalized()
 	player_ref = player
 	look_at(global_position + direction, Vector3.UP)
-
-func _ready():
-	# -----------------------
-	# gravity_scale = 0.0
-	# linear_velocity = direction * speed
-	# -----------------------
+	
+	# Se maneja la autodestrucción temporal aquí
 	await get_tree().create_timer(lifetime).timeout
-	queue_free()
-
+	if visible: # Si sigue viva después de 3 segundos, se devuelve al pool
+		ProjectilePool.return_bullet(self)
+	
 # Nueva Funcion: Al ser un Area3D, se mueve la bala manualmente (+ rapido)
 func _physics_process(delta):
 	global_position += direction * speed * delta
@@ -45,7 +42,9 @@ func _on_body_entered(body):
 		print("💥 Impacto en: ", body.name)
 	
 	_spawn_impact_particle()
-	queue_free()
+#	queue_free()
+# 	En lugar de queue_free(), se devuelve al pool
+	ProjectilePool.return_bullet(self)
 
 # Nueva Funcion: Originaria de bullet_simple.gd
 func _spawn_impact_particle():

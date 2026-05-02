@@ -19,6 +19,10 @@ run/main_scene="res://ui/menus/main_menu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/2d/icon.svg"
 
+[autoload]
+
+ProjectilePool="*uid://cjs7s8tgftoub"
+
 [input]
 
 move_left={
