@@ -6,15 +6,18 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_odxfs"]
 size = Vector3(1.88513, 2.01349, 1.91199)
 
-[node name="Enemy" type="CharacterBody3D"]
+[node name="Enemy" type="CharacterBody3D" unique_id=2046916549 node_paths=PackedStringArray("model_node")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_fioap")
 speed = 5.0
 health = 50
+model_node = NodePath("Venus")
 
-[node name="EnemyCollision" type="CollisionShape3D" parent="."]
+[node name="EnemyCollision" type="CollisionShape3D" parent="." unique_id=1712859192]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000183105, -0.00790356, -0.794489)
 shape = SubResource("BoxShape3D_odxfs")
 
-[node name="Venus" parent="." instance=ExtResource("2_i5ym6")]
+[node name="Venus" parent="." unique_id=1431071980 instance=ExtResource("2_i5ym6")]
 transform = Transform3D(-1.2, 0, 1.81195e-07, 0, 1.2, 0, -1.81195e-07, 0, -1.2, -0.0089771, -1.04134, -0.803613)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1110411253]

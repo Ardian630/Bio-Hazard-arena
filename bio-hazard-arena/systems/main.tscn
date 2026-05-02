@@ -11,43 +11,38 @@
 [ext_resource type="Script" uid="uid://de0eqve0g4sjg" path="res://systems/wave_manager.gd" id="9_mker2"]
 [ext_resource type="PackedScene" uid="uid://cc4ly3ng2ij3w" path="res://assets/3d/models/MapaPrueba.glb" id="10_7e8wu"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g61vy"]
+vertices = PackedVector3Array(31.794174, 0.4792199, -31.427975, 32.044174, 0.4792199, -42.677975, -26.705826, 0.4792199, -42.677975, -26.705826, 0.4792199, -31.427975, 33.294174, 0.4792199, -31.427975, 33.544174, 0.4792199, -30.677975, 34.294174, 0.4792199, -30.427975, 44.794174, 0.4792199, -28.427975, 44.794174, 0.4792199, -42.677975, 34.294174, 0.4792199, -28.427975, -29.705826, 0.4792199, 28.322025, -28.455826, 0.4792199, 28.572025, -28.455826, 0.4792199, -29.677975, -29.705826, 0.4792199, -29.677975, -26.205826, 0.4792199, -18.677975, -20.705826, 0.4792199, -18.427975, -20.705826, 0.4792199, -29.177975, -26.205826, 0.4792199, -29.177975, -21.455826, 2.47922, -17.927975, -21.455826, 2.47922, -16.677975, -20.455826, 2.47922, -16.677975, -20.455826, 2.47922, -29.177975, -26.205826, 1.4792199, -16.927975, -22.455826, 1.4792199, -16.927975, -22.455826, 2.47922, -17.927975, -26.205826, 2.47922, -29.177975, -26.205826, 2.47922, -18.289085, -22.205826, 0.4792199, -15.677975, -26.205826, 0.4792199, 29.322025, -26.205826, 0.4792199, -15.436039, 32.044174, 0.4792199, 29.322025, 32.044174, 0.4792199, -29.177975, -19.455826, 0.4792199, -15.927975, -19.455826, 0.4792199, -29.177975, 34.294174, 0.4792199, 28.322025, 44.794174, 0.4792199, 28.322025, 34.294174, 0.4792199, 30.322025, 33.544174, 0.4792199, 30.572025, 33.544174, 0.4792199, 31.322025, 31.294174, 0.4792199, 31.572025, 31.294174, 0.4792199, 42.572025, 44.794174, 0.4792199, 42.572025, -27.705826, 0.4792199, 31.322025, -27.705826, 0.4792199, 30.572025, -28.455826, 0.4792199, 30.322025, -29.955826, 0.4792199, 30.322025, -25.455826, 0.4792199, 42.572025, -25.455826, 0.4792199, 31.572025, -38.705826, 0.4792199, 30.322025, -38.705826, 0.4792199, 42.572025)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 8), PackedInt32Array(8, 4, 1), PackedInt32Array(7, 9, 6), PackedInt32Array(4, 0, 1), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(17, 16, 14), PackedInt32Array(14, 16, 15), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(24, 23, 22), PackedInt32Array(22, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(24, 25, 21), PackedInt32Array(21, 18, 24), PackedInt32Array(23, 27, 22), PackedInt32Array(22, 27, 29), PackedInt32Array(29, 27, 28), PackedInt32Array(28, 32, 30), PackedInt32Array(30, 32, 31), PackedInt32Array(28, 27, 32), PackedInt32Array(32, 33, 31), PackedInt32Array(9, 7, 34), PackedInt32Array(34, 7, 35), PackedInt32Array(38, 37, 36), PackedInt32Array(36, 34, 35), PackedInt32Array(40, 39, 38), PackedInt32Array(36, 35, 38), PackedInt32Array(38, 35, 41), PackedInt32Array(38, 41, 40), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(11, 44, 10), PackedInt32Array(10, 44, 45), PackedInt32Array(47, 46, 42), PackedInt32Array(42, 46, 49), PackedInt32Array(42, 49, 48), PackedInt32Array(48, 45, 42), PackedInt32Array(47, 39, 46), PackedInt32Array(46, 39, 40)]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_lxh6s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sgj7s"]
 size = Vector3(1, 3.86829, 1)
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" unique_id=62436191]
 
-[node name="Player" parent="." instance=ExtResource("1_ws8va")]
+[node name="Player" parent="." unique_id=274716397 instance=ExtResource("1_ws8va")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0296046, 17)
 speed = 9.0
 rotation_speed = 6.0
 flashlight_energy_drain = 2.0
 bullet_scene = ExtResource("2_3ykdm")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=651063177]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 22.7578, 0)
 light_color = Color(0.287951, 0.414008, 0.809812, 1)
 shadow_enabled = true
 
-[node name="Ground" parent="." instance=ExtResource("2_srhae")]
-visible = false
+[node name="UI" parent="." unique_id=1488471246 instance=ExtResource("3_onrkn")]
 
-[node name="UI" parent="." instance=ExtResource("3_onrkn")]
+[node name="GameOverScreen" parent="." unique_id=1480414318 instance=ExtResource("6_gevah")]
 
-[node name="SueloColision" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SueloColision"]
-transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, -1.02078, 0)
-shape = SubResource("BoxShape3D_lxh6s")
-
-[node name="GameOverScreen" parent="." instance=ExtResource("6_gevah")]
-
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Node3D" type="Node3D" parent="." unique_id=156074492]
 script = ExtResource("7_44svi")
 object_scene = ExtResource("8_niujc")
 
-[node name="WaveManager" type="Node3D" parent="."]
+[node name="WaveManager" type="Node3D" parent="." unique_id=1959928265]
 script = ExtResource("9_mker2")
 enemy_scene = ExtResource("4_s5yt1")
 max_waves = 20
@@ -55,44 +50,56 @@ enemies_per_wave = 4
 wave_increase = 1
 spawn_area_size = Vector2(20, 20)
 
-[node name="MapaPrueba" parent="." instance=ExtResource("10_7e8wu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92129, -0.00425804, 0.0115395)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MapaPrueba"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MapaPrueba/StaticBody3D"]
-transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92614, 30.3109)
-shape = SubResource("BoxShape3D_sgj7s")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="MapaPrueba/StaticBody3D"]
-transform = Transform3D(-2.62268e-06, 0, 1, 0, 1, 0, -60, 0, -4.37114e-08, -30.3233, 1.92614, 0.0394001)
-shape = SubResource("BoxShape3D_sgj7s")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="MapaPrueba/StaticBody3D"]
-transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92614, -30.2007)
-shape = SubResource("BoxShape3D_sgj7s")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="MapaPrueba/StaticBody3D"]
-transform = Transform3D(-2.62268e-06, 0, 1, 0, 1, 0, -60, 0, -4.37114e-08, 30.2237, 1.92614, 0.0394001)
-shape = SubResource("BoxShape3D_sgj7s")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=386750262]
 transform = Transform3D(-3.34912e-08, 0.642614, -0.76619, 2.80895e-08, 0.76619, 0.642614, 1, 1.77636e-15, -4.37114e-08, -26.1072, 7.94419, 18.9035)
 light_color = Color(0.850022, 0.911889, 0.893551, 1)
 light_energy = 50.0
 spot_range = 30.0
 spot_angle = 30.4711
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=845522099]
 transform = Transform3D(-3.34912e-08, 0.642614, -0.76619, 2.80895e-08, 0.76619, 0.642614, 1, 1.77636e-15, -4.37114e-08, -26.1072, 7.94419, 2.58509)
 light_color = Color(0.850022, 0.911889, 0.893551, 1)
 light_energy = 50.0
 spot_range = 30.0
 spot_angle = 30.4711
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=568530427]
 transform = Transform3D(-3.34912e-08, 0.642614, -0.76619, 2.80895e-08, 0.76619, 0.642614, 1, 1.77636e-15, -4.37114e-08, -26.1072, 7.94419, -13.8949)
 light_color = Color(0.850022, 0.911889, 0.893551, 1)
 light_energy = 50.0
 spot_range = 30.0
 spot_angle = 30.4711
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1781038830]
+navigation_mesh = SubResource("NavigationMesh_g61vy")
+
+[node name="Ground" parent="NavigationRegion3D" unique_id=1366578789 instance=ExtResource("2_srhae")]
+visible = false
+
+[node name="SueloColision" type="StaticBody3D" parent="NavigationRegion3D" unique_id=584245032]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/SueloColision" unique_id=1391745370]
+transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, -1.02078, 0)
+shape = SubResource("BoxShape3D_lxh6s")
+
+[node name="MapaPrueba" parent="NavigationRegion3D" unique_id=219859169 instance=ExtResource("10_7e8wu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92129, -0.00425804, 0.0115395)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/MapaPrueba" unique_id=255908538]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MapaPrueba/StaticBody3D" unique_id=365178138]
+transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92614, 30.3109)
+shape = SubResource("BoxShape3D_sgj7s")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NavigationRegion3D/MapaPrueba/StaticBody3D" unique_id=1931821811]
+transform = Transform3D(-2.62268e-06, 0, 1, 0, 1, 0, -60, 0, -4.37114e-08, -30.3233, 1.92614, 0.0394001)
+shape = SubResource("BoxShape3D_sgj7s")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="NavigationRegion3D/MapaPrueba/StaticBody3D" unique_id=18693507]
+transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92614, -30.2007)
+shape = SubResource("BoxShape3D_sgj7s")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="NavigationRegion3D/MapaPrueba/StaticBody3D" unique_id=1292174240]
+transform = Transform3D(-2.62268e-06, 0, 1, 0, 1, 0, -60, 0, -4.37114e-08, 30.2237, 1.92614, 0.0394001)
+shape = SubResource("BoxShape3D_sgj7s")

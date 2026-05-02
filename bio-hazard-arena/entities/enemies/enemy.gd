@@ -37,12 +37,25 @@ var current_speed_multiplier : float = 1.0
 var is_in_light : bool = false
 
 # Nodo del modelo
-@onready var model_node : Node3D = $Venus  # Cambia por el nombre real de tu modelo
-@onready var original_scale : Vector3 = model_node.scale
+# --------------------------------------------------------------------------
+# @onready var model_node : Node3D = $Venus  # Cambia por el nombre real de tu modelo
+# --------------------------------------------------------------------------
+@export var model_node : Node3D
+
+# --------------------------------------------------------------------------
+# @onready var original_scale : Vector3 = model_node.scale
+# --------------------------------------------------------------------------
+var original_scale : Vector3 #Se inicializa en la funcion _ready()
+
+@onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
 
 func _ready():
-	player = get_node("/root/Main/Player")
-	original_scale = model_node.scale
+	player = get_node("/root/Main/Player") # !!!
+	
+	if model_node:
+		original_scale = model_node.scale
+	else:
+		print("¡Error! No se ha asignado el model_node en el inspector del enemigo")
 
 # 🔹 NUEVA FUNCIÓN: Configurar dificultad según la horda
 func set_wave_difficulty(wave: int):
@@ -87,7 +100,10 @@ func _check_if_in_flashlight():
 	if dot > cone_cos and distance < flashlight_max_distance:
 		var space = get_world_3d().direct_space_state
 		var query = PhysicsRayQueryParameters3D.create(player.global_position, global_position)
-		query.exclude = [self, player]
+		# ---------------------------------------------------------------
+		# query.exclude = [self, player]
+		# ---------------------------------------------------------------
+		query.exclude = [self.get_rid(), player.get_rid()]
 		var result = space.intersect_ray(query)
 		is_in_light = result.is_empty()
 	else:
@@ -107,9 +123,29 @@ func _update_scale_and_speed(delta):
 	if model_node:
 		model_node.scale = original_scale * current_scale_factor
 
+# ------------------------------------------------------------------------------
+# func _chase_player(delta):
+#	var dir = (player.global_position - global_position).normalized()
+#	dir.y = 0
+#	velocity.x = dir.x * speed * current_speed_multiplier
+#	velocity.z = dir.z * speed * current_speed_multiplier
+	
+#	if dir.length_squared() > 0:
+#		var target_angle = atan2(-dir.x, -dir.z)
+#		rotation.y = lerp_angle(rotation.y, target_angle, 10.0 * delta)
+# ------------------------------------------------------------------------------
+
 func _chase_player(delta):
-	var dir = (player.global_position - global_position).normalized()
+	# Se le indica al agente que su destino final es el jugador (player)
+	nav_agent.target_position = player.global_position
+	
+	# El agente calcula la ruta esquivando paredes y da el siguiente paso a tomar
+	var next_path_position = nav_agent.get_next_path_position()
+	
+	# Se calcula dirección hacia ese "paso" en vez de ir directo al jugador
+	var dir = (next_path_position - global_position).normalized()
 	dir.y = 0
+	
 	velocity.x = dir.x * speed * current_speed_multiplier
 	velocity.z = dir.z * speed * current_speed_multiplier
 	

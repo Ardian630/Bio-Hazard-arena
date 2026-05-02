@@ -7,7 +7,7 @@ var music : AudioStreamPlayer
 func _ready():
 	music = AudioStreamPlayer.new()
 	add_child(music)
-	music.stream = preload("res://sounds/Ravana_pour_une_infante_defunte.mp3")
+	music.stream = preload("res://assets/audios/sounds/Ravana_pour_une_infante_defunte.mp3")
 	music.play()
 	# Conectar señales de los botones
 	start_button.pressed.connect(_on_start_pressed)
@@ -26,7 +26,7 @@ func _on_start_pressed():
 	await tween.finished
 	
 	# Cambiar a la escena del juego
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://systems/main.tscn")
 
 func _on_quit_pressed():
 	print("👋 Saliendo del juego...")

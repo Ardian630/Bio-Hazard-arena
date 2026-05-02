@@ -27,8 +27,10 @@ extends CharacterBody3D
 @export var bullet_max_range : float = 20.0
 @export var muzzle_flash_scene : PackedScene
 
-# Nodos
-@onready var model_node : Node3D = $Blitz
+# Nodos --------------------------------------------------------------------
+# @onready var model_node : Node3D = $Blitz
+# --------------------------------------------------------------------------
+@export var model_node : Node3D
 @onready var muzzle : Node3D = $Muzzle
 @onready var camera : Camera3D = get_viewport().get_camera_3d()
 @onready var flashlight_node : SpotLight3D = $Flashlight
@@ -435,7 +437,7 @@ func _show_game_over_screen():
 	var game_over = get_node("/root/Main/GameOverScreen")
 	if not game_over:
 		# Si no existe, crearla
-		var game_over_scene = preload("res://game_over_screen.tscn")
+		var game_over_scene = preload("res://ui/menus/game_over_screen.tscn")
 		game_over = game_over_scene.instantiate()
 		get_node("/root/Main").add_child(game_over)
 	
