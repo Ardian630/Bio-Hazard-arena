@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b4eckm28c8ofa"]
+
+[ext_resource type="Script" uid="uid://bvhs1w6gqrojf" path="res://ui/menus/game_over_screen.gd" id="1_fbrxr"]
+[ext_resource type="Texture2D" uid="uid://dew4143ik4t1v" path="res://assets/2d/BlitzDead.png" id="2_8f6gc"]
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fbrxr")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.705882)
+
+[node name="GameOverImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8f6gc")
+expand_mode = 1
+stretch_mode = 6

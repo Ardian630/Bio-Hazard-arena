@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://dawlp3t4re74n"]
+
+[ext_resource type="Script" uid="uid://cdnihstum2lsa" path="res://ui/hud/ui.gd" id="1_135fj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5lqc"]
+bg_color = Color(0.149967, 0.034366, 0.0212445, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 4
+border_width_bottom = 3
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="Gradient" id="Gradient_ltit7"]
+colors = PackedColorArray(0.723779, 0.0811801, 0.212132, 1, 0.991949, 0.437275, 0.212943, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_38aox"]
+gradient = SubResource("Gradient_ltit7")
+
+[sub_resource type="Gradient" id="Gradient_12gks"]
+colors = PackedColorArray(0.0789462, 0.319966, 0.695296, 1, 0.267336, 0.635403, 0.800368, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cbjsn"]
+gradient = SubResource("Gradient_12gks")
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_135fj")
+
+[node name="HealthBarBackground" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 340.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m5lqc")
+metadata/_edit_group_ = true
+
+[node name="HealthBar" type="TextureProgressBar" parent="HealthBarBackground"]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 40.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_38aox")
+
+[node name="HealthText" type="Label" parent="HealthBarBackground/HealthBar"]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyBarBackground" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 64.0
+offset_right = 340.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m5lqc")
+metadata/_edit_group_ = true
+
+[node name="EnergyBar" type="TextureProgressBar" parent="EnergyBarBackground"]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 40.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_cbjsn")
+
+[node name="EnergyText" type="Label" parent="EnergyBarBackground/EnergyBar"]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 44.0
+offset_right = 1122.0
+offset_bottom = 67.0
+text = "Horda: 1/10"
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 1031.0
+offset_top = 16.0
+offset_right = 1139.0
+offset_bottom = 39.0
+text = "Tiempo: 00.00"
+
+[node name="EnemiesLeftLabel" type="Label" parent="."]
+offset_left = 481.0
+offset_right = 572.0
+offset_bottom = 23.0
+text = "Enemigos Restantes: 0"
