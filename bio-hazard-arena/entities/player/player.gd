@@ -24,7 +24,7 @@ extends CharacterBody3D
 # DISPARO
 @export var bullet_scene : PackedScene
 @export var shoot_cooldown : float = 0.3
-@export var bullet_max_range : float = 20.0
+@export var bullet_max_range : float = 10.0
 @export var muzzle_flash_scene : PackedScene
 
 # Nodos --------------------------------------------------------------------

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci08811acllu1"]
 
 [ext_resource type="PackedScene" uid="uid://dw25bxxi2g7sv" path="res://entities/player/player.tscn" id="1_ws8va"]
-[ext_resource type="PackedScene" uid="uid://bw78nng3anqde" path="res://weapons/bullets/bullet_simple.tscn" id="2_3ykdm"]
+[ext_resource type="PackedScene" uid="uid://clh3v35rlv4no" path="res://weapons/bullets/bullet.tscn" id="2_g61vy"]
 [ext_resource type="PackedScene" uid="uid://5oitepie4rn3" path="res://assets/3d/models/Suelo.glb" id="2_srhae"]
 [ext_resource type="PackedScene" uid="uid://dawlp3t4re74n" path="res://ui/hud/ui.tscn" id="3_onrkn"]
 [ext_resource type="PackedScene" uid="uid://7uy4diygd1ue" path="res://entities/enemies/enemy.tscn" id="4_s5yt1"]
@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.0296046, 17)
 speed = 9.0
 rotation_speed = 6.0
 flashlight_energy_drain = 2.0
-bullet_scene = ExtResource("2_3ykdm")
+bullet_scene = ExtResource("2_g61vy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=651063177]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 22.7578, 0)

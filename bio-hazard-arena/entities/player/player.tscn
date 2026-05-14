@@ -11,7 +11,6 @@ size = Vector3(1, 1.57611, 1.50623)
 [node name="Player" type="CharacterBody3D" unique_id=252776923 node_paths=PackedStringArray("model_node")]
 script = ExtResource("1_1iyln")
 speed = 7.0
-bullet_max_range = 10.0
 muzzle_flash_scene = ExtResource("2_43rk1")
 model_node = NodePath("Blitz")
 

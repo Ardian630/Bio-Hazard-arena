@@ -1,7 +1,7 @@
 extends Node
 
 var pool: Array = []
-var max_bullets: int = 50 # Cantidad máxima de balas reciclabes
+var max_bullets: int = 5 # Cantidad máxima de balas reciclabes
 var bullet_scene: PackedScene = preload("res://weapons/bullets/bullet.tscn")
 
 func _ready() -> void:

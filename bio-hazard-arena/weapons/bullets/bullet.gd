@@ -42,7 +42,7 @@ func _on_body_entered(body):
 		print("💥 Impacto en: ", body.name)
 	
 	_spawn_impact_particle()
-#	queue_free()
+	#queue_free()
 # 	En lugar de queue_free(), se devuelve al pool
 	ProjectilePool.return_bullet(self)
 
