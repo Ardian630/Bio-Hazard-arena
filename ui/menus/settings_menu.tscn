@@ -1,0 +1,398 @@
+[gd_scene format=3 uid="uid://cwdj5ybmg2bpf"]
+
+[ext_resource type="Script" uid="uid://b8cs2ppt1slv5" path="res://ui/menus/settings_menu.gd" id="1_script"]
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://7mbl2vfpubau" path="res://assets/2d/Ajustespanel.png" id="2_86yk5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_igsxx"]
+texture = ExtResource("2_86yk5")
+=======
+[ext_resource type="Texture2D" uid="uid://7mbl2vfpubau" path="res://assets/2d/Ajustespanel.png" id="2_etr7b"]
+[ext_resource type="Texture2D" uid="uid://cq2ssiry8epcb" path="res://assets/2d/audio_def.png" id="3_o40hf"]
+[ext_resource type="Texture2D" uid="uid://bixmpgftevx4g" path="res://assets/2d/Audio_active.png" id="4_txkl1"]
+[ext_resource type="Texture2D" uid="uid://cvcmjf085bh3k" path="res://assets/2d/controles_def.png" id="5_txkl1"]
+[ext_resource type="Texture2D" uid="uid://cihfrn4ftv81h" path="res://assets/2d/control_active.png" id="6_qsjx8"]
+[ext_resource type="Texture2D" uid="uid://vdkjebb6frmo" path="res://assets/2d/graficos_def.png" id="7_122vd"]
+[ext_resource type="Texture2D" uid="uid://daqlo5vgr44id" path="res://assets/2d/grafico_active.png" id="8_jwcag"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qsjx8"]
+texture = ExtResource("2_etr7b")
+>>>>>>> bbcaedf (Actualizacion de paneles)
+expand_margin_left = 50.0
+expand_margin_top = 100.0
+expand_margin_right = 50.0
+expand_margin_bottom = 100.0
+<<<<<<< HEAD
+=======
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_122vd"]
+texture = ExtResource("3_o40hf")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txkl1"]
+texture = ExtResource("3_o40hf")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwcag"]
+texture = ExtResource("4_txkl1")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o40hf"]
+texture = ExtResource("3_o40hf")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etr7b"]
+texture = ExtResource("3_o40hf")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57f2o"]
+texture = ExtResource("5_txkl1")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jov4b"]
+texture = ExtResource("5_txkl1")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slkwb"]
+texture = ExtResource("6_qsjx8")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fx88p"]
+texture = ExtResource("5_txkl1")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmgo8"]
+texture = ExtResource("5_txkl1")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qgkhb"]
+texture = ExtResource("7_122vd")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg4fd"]
+texture = ExtResource("7_122vd")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7bvdt"]
+texture = ExtResource("8_jwcag")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l0guh"]
+texture = ExtResource("7_122vd")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5i347"]
+texture = ExtResource("7_122vd")
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+>>>>>>> bbcaedf (Actualizacion de paneles)
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1336617949]
+process_mode = 3
+layer = 10
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=947224529]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Panel" type="Panel" parent="." unique_id=222489568]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -323.0
+offset_right = 300.0
+<<<<<<< HEAD
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_igsxx")
+=======
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qsjx8")
+>>>>>>> bbcaedf (Actualizacion de paneles)
+
+[node name="Tabs" type="HBoxContainer" parent="Panel" unique_id=198476701]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 30.0
+<<<<<<< HEAD
+offset_top = 174.0
+offset_right = -30.0
+offset_bottom = 214.0
+=======
+offset_top = 120.0
+offset_right = -30.0
+offset_bottom = 160.0
+>>>>>>> bbcaedf (Actualizacion de paneles)
+grow_horizontal = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TabAudio" type="Button" parent="Panel/Tabs" unique_id=1777856039]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_122vd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_txkl1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jwcag")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_o40hf")
+theme_override_styles/focus = SubResource("StyleBoxTexture_etr7b")
+toggle_mode = true
+
+[node name="TabControls" type="Button" parent="Panel/Tabs" unique_id=646567182]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_57f2o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jov4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_slkwb")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fx88p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_hmgo8")
+toggle_mode = true
+
+[node name="TabGraphics" type="Button" parent="Panel/Tabs" unique_id=572566474]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_qgkhb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xg4fd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7bvdt")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l0guh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5i347")
+toggle_mode = true
+
+[node name="Content" type="MarginContainer" parent="Panel" unique_id=613653473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+<<<<<<< HEAD
+offset_top = 244.0
+offset_right = -30.0
+offset_bottom = 34.0
+=======
+offset_top = 169.0
+offset_right = -30.0
+offset_bottom = -41.0
+>>>>>>> bbcaedf (Actualizacion de paneles)
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="Audio" type="VBoxContainer" parent="Panel/Content" unique_id=522404486]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Master" type="HBoxContainer" parent="Panel/Content/Audio" unique_id=1768056737]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Audio/Master" unique_id=617896719]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Volumen General"
+
+[node name="HSlider" type="HSlider" parent="Panel/Content/Audio/Master" unique_id=515922207]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="Music" type="HBoxContainer" parent="Panel/Content/Audio" unique_id=1507408463]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Audio/Music" unique_id=1525535653]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Música"
+
+[node name="HSlider" type="HSlider" parent="Panel/Content/Audio/Music" unique_id=950419834]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="SFX" type="HBoxContainer" parent="Panel/Content/Audio" unique_id=2065780214]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Audio/SFX" unique_id=518816084]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Efectos (SFX)"
+
+[node name="HSlider" type="HSlider" parent="Panel/Content/Audio/SFX" unique_id=592159486]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="Controls" type="VBoxContainer" parent="Panel/Content" unique_id=166552362]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MouseSens" type="HBoxContainer" parent="Panel/Content/Controls" unique_id=1244210064]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Controls/MouseSens" unique_id=738690912]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Sensibilidad Ratón"
+
+[node name="HSlider" type="HSlider" parent="Panel/Content/Controls/MouseSens" unique_id=1249651750]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="StickSens" type="HBoxContainer" parent="Panel/Content/Controls" unique_id=270291749]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Controls/StickSens" unique_id=1411820303]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Sensibilidad Mando"
+
+[node name="HSlider" type="HSlider" parent="Panel/Content/Controls/StickSens" unique_id=80535494]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="P1Device" type="HBoxContainer" parent="Panel/Content/Controls" unique_id=323045]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Controls/P1Device" unique_id=549004932]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Dispositivo J1"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/Content/Controls/P1Device" unique_id=1981745860]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "Teclado / Ratón"
+popup/item_0/id = 0
+popup/item_1/text = "Mando"
+popup/item_1/id = 1
+
+[node name="P2Device" type="HBoxContainer" parent="Panel/Content/Controls" unique_id=112802286]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Controls/P2Device" unique_id=1355838162]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Dispositivo J2"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/Content/Controls/P2Device" unique_id=2086627117]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "Teclado / Ratón"
+popup/item_0/id = 0
+popup/item_1/text = "Mando"
+popup/item_1/id = 1
+
+[node name="Graphics" type="VBoxContainer" parent="Panel/Content" unique_id=1225458164]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="WindowMode" type="HBoxContainer" parent="Panel/Content/Graphics" unique_id=1380043296]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Graphics/WindowMode" unique_id=802717963]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Modo Ventana"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/Content/Graphics/WindowMode" unique_id=565386471]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "Ventana"
+popup/item_0/id = 0
+popup/item_1/text = "Pantalla Completa"
+popup/item_1/id = 1
+popup/item_2/text = "Sin Bordes"
+popup/item_2/id = 2
+
+[node name="VSync" type="HBoxContainer" parent="Panel/Content/Graphics" unique_id=2097415087]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Content/Graphics/VSync" unique_id=881883024]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "VSync"
+
+[node name="CheckButton" type="CheckButton" parent="Panel/Content/Graphics/VSync" unique_id=286508611]
+layout_mode = 2
+
+[node name="BtnDefaults" type="Button" parent="Panel" unique_id=167510287]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+<<<<<<< HEAD
+offset_top = -147.0
+offset_right = 253.0
+offset_bottom = -107.0
+=======
+offset_top = -107.0
+offset_right = 253.0
+offset_bottom = -67.0
+>>>>>>> bbcaedf (Actualizacion de paneles)
+grow_vertical = 0
+text = "Restaurar Predeterminados"
+metadata/_edit_group_ = true
+
+[node name="BtnBack" type="Button" parent="Panel" unique_id=407400726]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+<<<<<<< HEAD
+offset_top = -147.0
+offset_right = -30.0
+offset_bottom = -107.0
+=======
+offset_top = -107.0
+offset_right = -30.0
+offset_bottom = -67.0
+>>>>>>> bbcaedf (Actualizacion de paneles)
+grow_horizontal = 0
+grow_vertical = 0
+text = "Volver"
+metadata/_edit_group_ = true

@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://ui/menus/tutorial_screen.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/Siguiente_normal.png" id="2_next_n"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/Siguiente_hover.png" id="3_next_h"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/Siguiente_pressed.png" id="4_next_p"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/volver_normal.png" id="5_back_n"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/volver_hover.png" id="6_back_h"]
+[ext_resource type="Texture2D" path="res://assets/2d/Buttons/volver_pressed.png" id="7_back_p"]
+
+[node name="TutorialScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 30
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -80.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnSiguiente" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -70.0
+offset_right = -20.0
+offset_bottom = -20.0
+texture_normal = ExtResource("2_next_n")
+texture_pressed = ExtResource("4_next_p")
+texture_hover = ExtResource("3_next_h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BtnCerrar" type="TextureButton" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -70.0
+offset_right = -20.0
+offset_bottom = -20.0
+texture_normal = ExtResource("5_back_n")
+texture_pressed = ExtResource("7_back_p")
+texture_hover = ExtResource("6_back_h")
+ignore_texture_size = true
+stretch_mode = 0

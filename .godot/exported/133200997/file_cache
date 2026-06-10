@@ -1,0 +1,15 @@
+res://entities/enemies/enemy.tscn::b8dd7b457141b06a30e5c5df6016532d::1780511994::res://.godot/exported/133200997/export-6fadb753982c850c34172545686a1b18-enemy.scn
+res://entities/items/object.tscn::b0bd8b7ec5071142bd6403dbc333c12f::1780511994::res://.godot/exported/133200997/export-5f0513e87d70bdab7a55e7b9d0f2f01d-object.scn
+res://entities/player/player.tscn::d920b0e91bf7a17e2e407e6b6b90a6a8::1780511994::res://.godot/exported/133200997/export-21b780c0d4e68e8c35280599c3e67de2-player.scn
+res://systems/main.tscn::d7587cf7c44dd5c81a258eb81b2dc316::1780539445::res://.godot/exported/133200997/export-7deefe298b559751f6daf27cc075a65b-main.scn
+res://ui/hud/ui.tscn::1f9bd9f3230e32c40239ee58758a6a5d::1780511994::res://.godot/exported/133200997/export-4111bac5538ced9946517fda2a595f4b-ui.scn
+res://ui/menus/game_over_screen.tscn::7784d2c1538301d0e0ee29efbfe1e477::1780511994::res://.godot/exported/133200997/export-b8ec5febd88887122bb00d145cd7f660-game_over_screen.scn
+res://ui/menus/main_menu.tscn::422870e9609d809a894efce445ebaef3::1781059675::res://.godot/exported/133200997/export-cb7ea3e181d698d8ff77327b54c312f7-main_menu.scn
+res://ui/menus/pause_menu.tscn::d6e799d540dfdb98fd6ee1570993f1c2::1780535459::res://.godot/exported/133200997/export-725f48790da4121694f0209f291f36a6-pause_menu.scn
+res://ui/menus/settings_menu.tscn::cb2cf0ad4c17f2395aea161ae3e60b82::1780516805::res://.godot/exported/133200997/export-39f52afabe7a0eb7c014105eae87974d-settings_menu.scn
+res://ui/menus/tutorial_screen.tscn::eeb072ea5ace4601300609755f5317ee::1780511994::res://.godot/exported/133200997/export-bb73592017b129e91b38861a2131fcb1-tutorial_screen.scn
+res://weapons/bullets/bullet.tscn::7127c78a3dc2e18586b4c6435a94126a::1780511994::res://.godot/exported/133200997/export-c85b545a5a4cb671523bd7d7a880c8e1-bullet.scn
+res://weapons/bullets/bullet_simple.tscn::98c291e5d989dbb6c9eeb286ab3713e0::1780511994::res://.godot/exported/133200997/export-5ef2c4df76fb25f661e52cee3a31a80b-bullet_simple.scn
+res://weapons/effects/impact_particle.tscn::1519ac2cf707310a008e7484addac606::1780511994::res://.godot/exported/133200997/export-308d39f33b894ed018af6fe582b9fe15-impact_particle.scn
+res://weapons/effects/muzzle_flash.tscn::63b4a666659ede72d801d009325918dc::1780511994::res://.godot/exported/133200997/export-2afae5230dbe79526cd82f1bcf0ab14b-muzzle_flash.scn
+res://default_bus_layout.tres::08e8c16c479b555c9af5ec6e26056b76::1780511994::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

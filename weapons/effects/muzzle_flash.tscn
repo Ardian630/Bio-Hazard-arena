@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5i3ytssgurnq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yepyk"]
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 2.0
+color = Color(0.279807, 0.824781, 0.997233, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4e3o"]
+albedo_color = Color(0.656726, 0.744366, 0.798953, 1)
+emission_enabled = true
+emission = Color(0.851651, 0.77559, 0.731904, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_u5dwq"]
+material = SubResource("StandardMaterial3D_r4e3o")
+radius = 0.1
+height = 0.1
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+randomness = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_yepyk")
+draw_pass_1 = SubResource("SphereMesh_u5dwq")
